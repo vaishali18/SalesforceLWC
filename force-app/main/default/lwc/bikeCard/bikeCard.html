@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Bike Details" icon-name="standard:apex_plugin">
+        <div id="waiting" if:false={ready}>Loading…</div>
+        <div id="display" if:true={ready}>
+            <div>Name: {bike.name}</div>
+            <div>Description: {bike.description}</div>
+            <lightning-badge label={bike.material}></lightning-badge>
+            <lightning-badge label={bike.category}></lightning-badge>
+            <div>Price: {bike.price}</div>
+            <div><img src={bike.pictureUrl} /></div>
+        </div>
+    </lightning-card>
+</template>
