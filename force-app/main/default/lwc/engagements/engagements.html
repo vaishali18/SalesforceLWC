@@ -1,0 +1,476 @@
+<template>
+    <div id="crmabe-root" class="crmabe-engagement_root">
+        <div class="crmabe-engagement_details" role="region" aria-label="Engagement Details">
+            <div class="crmabe-engagement_details_header">
+                <div class="crmabe-engagement_details_title">Engagement Details</div>
+                <div class="crmabe-engagement_filters"></div>
+            </div>
+            <div class="crmabe-engagement_list">
+                <div class="crmabe-engagement_datagrid">
+                    <div class="crmabe-engagement_datagrid_header">
+                        <ul class="crmabe-engagement_datagrid_header_cols">
+                            <li class="crmabe-engagement_datagrid_col_item crmabe-engagement_col_name">
+                                <span class="crmabe-engagement_datagrid_col_name">Name</span>
+                                <span class="crmabe-engagement_datagrid_col_arrow_icon">
+                                    <svg class="IconArrowDown" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.9962 4.35019L6.2654 9.12711C6.12694 9.26557 5.89617 9.26557 5.75771 9.12711L1.02694 4.35019C0.88848 4.21173 0.88848 3.98096 1.02694 3.8425L1.53463 3.3348C1.6731 3.19634 1.90386 3.19634 2.04233 3.3348L5.75771 7.09634C5.89617 7.2348 6.12694 7.2348 6.2654 7.09634L9.98079 3.35788C10.1193 3.21942 10.35 3.21942 10.4885 3.35788L10.9962 3.86557C11.1116 4.00403 11.1116 4.21173 10.9962 4.35019V4.35019Z"
+                                            fill="#706E6B" />
+                                    </svg>
+                                </span>
+                            </li>
+                            <li class="crmabe-engagement_datagrid_col_item crmabe-engagement_col_type">
+                                <span class="crmabe-engagement_datagrid_col_name">Type</span>
+                                <span class="crmabe-engagement_datagrid_col_arrow_icon">
+                                    <svg class="IconArrowDown" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.9962 4.35019L6.2654 9.12711C6.12694 9.26557 5.89617 9.26557 5.75771 9.12711L1.02694 4.35019C0.88848 4.21173 0.88848 3.98096 1.02694 3.8425L1.53463 3.3348C1.6731 3.19634 1.90386 3.19634 2.04233 3.3348L5.75771 7.09634C5.89617 7.2348 6.12694 7.2348 6.2654 7.09634L9.98079 3.35788C10.1193 3.21942 10.35 3.21942 10.4885 3.35788L10.9962 3.86557C11.1116 4.00403 11.1116 4.21173 10.9962 4.35019V4.35019Z"
+                                            fill="#706E6B" />
+                                    </svg>
+                                </span>
+                            </li>
+                            <li class="crmabe-engagement_datagrid_col_item crmabe-engagement_col_date">
+                                <span class="crmabe-engagement_datagrid_col_name">Date</span>
+                                <span class="crmabe-engagement_datagrid_col_arrow_icon">
+                                    <svg class="IconArrowDown" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.9962 4.35019L6.2654 9.12711C6.12694 9.26557 5.89617 9.26557 5.75771 9.12711L1.02694 4.35019C0.88848 4.21173 0.88848 3.98096 1.02694 3.8425L1.53463 3.3348C1.6731 3.19634 1.90386 3.19634 2.04233 3.3348L5.75771 7.09634C5.89617 7.2348 6.12694 7.2348 6.2654 7.09634L9.98079 3.35788C10.1193 3.21942 10.35 3.21942 10.4885 3.35788L10.9962 3.86557C11.1116 4.00403 11.1116 4.21173 10.9962 4.35019V4.35019Z"
+                                            fill="#706E6B" />
+                                    </svg>
+                                </span>
+                            </li>
+                            <li class="crmabe-engagement_datagrid_col_item crmabe-engagement_col_sentby">
+                                <span class="crmabe-engagement_datagrid_col_name">Sent by</span>
+                                <span class="crmabe-engagement_datagrid_col_arrow_icon">
+                                    <svg class="IconArrowDown" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.9962 4.35019L6.2654 9.12711C6.12694 9.26557 5.89617 9.26557 5.75771 9.12711L1.02694 4.35019C0.88848 4.21173 0.88848 3.98096 1.02694 3.8425L1.53463 3.3348C1.6731 3.19634 1.90386 3.19634 2.04233 3.3348L5.75771 7.09634C5.89617 7.2348 6.12694 7.2348 6.2654 7.09634L9.98079 3.35788C10.1193 3.21942 10.35 3.21942 10.4885 3.35788L10.9962 3.86557C11.1116 4.00403 11.1116 4.21173 10.9962 4.35019V4.35019Z"
+                                            fill="#706E6B" />
+                                    </svg>
+                                </span>
+                            </li>
+                            <li class="crmabe-engagement_datagrid_col_item crmabe-engagement_col_recent_activity">
+                                <span class="crmabe-engagement_datagrid_col_name">Recent Activity</span>
+                                <span class="crmabe-engagement_datagrid_col_arrow_icon">
+                                    <svg class="IconArrowDown" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.9962 4.35019L6.2654 9.12711C6.12694 9.26557 5.89617 9.26557 5.75771 9.12711L1.02694 4.35019C0.88848 4.21173 0.88848 3.98096 1.02694 3.8425L1.53463 3.3348C1.6731 3.19634 1.90386 3.19634 2.04233 3.3348L5.75771 7.09634C5.89617 7.2348 6.12694 7.2348 6.2654 7.09634L9.98079 3.35788C10.1193 3.21942 10.35 3.21942 10.4885 3.35788L10.9962 3.86557C11.1116 4.00403 11.1116 4.21173 10.9962 4.35019V4.35019Z"
+                                            fill="#706E6B" />
+                                    </svg>
+                                </span>
+                            </li>
+                            <li class="crmabe-engagement_datagrid_col_item crmabe-engagement_col_recipients">
+                                <span class="crmabe-engagement_datagrid_col_name">Recipients</span>
+                                <span class="crmabe-engagement_datagrid_col_arrow_icon">
+                                    <svg class="IconArrowDown" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.9962 4.35019L6.2654 9.12711C6.12694 9.26557 5.89617 9.26557 5.75771 9.12711L1.02694 4.35019C0.88848 4.21173 0.88848 3.98096 1.02694 3.8425L1.53463 3.3348C1.6731 3.19634 1.90386 3.19634 2.04233 3.3348L5.75771 7.09634C5.89617 7.2348 6.12694 7.2348 6.2654 7.09634L9.98079 3.35788C10.1193 3.21942 10.35 3.21942 10.4885 3.35788L10.9962 3.86557C11.1116 4.00403 11.1116 4.21173 10.9962 4.35019V4.35019Z"
+                                            fill="#706E6B" />
+                                    </svg>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="crmabe-engagement_datagrid_body">
+                        <ul class="crmabe-engagement_datagrid_rows">
+                            <li class="crmabe-engagement_datagrid_row_item">
+                                <ul
+                                    class="crmabe-engagement_datagrid_row_cols crmabe-engagement_datagrid_row_cols-selected">
+                                    <li class="crmabe-engagement_datagrid_col_item crmabe-engagement_col_name">
+                                        <div class="crmabe-engagement_col_name_wrapper">
+                                            <span class="crmabe-engagement_col_name_arrow_icon">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M18.327 7.25015L10.4424 15.2117C10.2117 15.4425 9.82704 15.4425 9.59627 15.2117L1.71165 7.25015C1.48088 7.01938 1.48088 6.63477 1.71165 6.404L2.55781 5.55784C2.78857 5.32707 3.17319 5.32707 3.40396 5.55784L9.59627 11.8271C9.82704 12.0578 10.2117 12.0578 10.4424 11.8271L16.6347 5.5963C16.8655 5.36553 17.2501 5.36553 17.4809 5.5963L18.327 6.44246C18.5193 6.67323 18.5193 7.01938 18.327 7.25015Z"
+                                                        fill="#706E6B" />
+                                                </svg>
+                                            </span>
+                                            <span class="crmabe-engagement_col_name_type_icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="24" height="24" rx="2" fill="#2178F3" />
+                                                    <path
+                                                        d="M14.9998 10.5993H18.0666C18.5821 10.5993 18.9999 11.0172 18.9999 11.5326V18.0657C18.9999 18.5812 18.5821 18.999 18.0666 18.999H5.93327C5.4178 18.999 4.99994 18.5812 4.99994 18.0657V11.5326C4.99994 11.0172 5.4178 10.5993 5.93327 10.5993H8.99976M18.9999 11.9993L12.871 15.501C12.3312 15.8092 11.6687 15.8092 11.1288 15.501L4.99994 11.9993M11.9999 12.4654V4.99902M11.9999 4.99902L14.3333 6.86563M11.9999 4.99902L9.66661 6.86563M6.81575 7.81136L4.70386 5.69954M4.70386 5.69954L6.11183 5.69901M4.70386 5.69954L4.7039 7.10689M17.5342 7.81066L19.6461 5.69884M19.6461 5.69884L18.2382 5.69877M19.6461 5.69884L19.6461 7.10665"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+                                            <span class="crmabe-engagement_col_name_text">The enablement cloud</span>
+                                        </div>
+                                    </li>
+                                    <li class="crmabe-engagement_datagrid_col_item crmabe-engagement_col_type">
+                                        <span class="crmabe-engagement_col_type_text">Email Blast</span>
+                                    </li>
+                                    <li class="crmabe-engagement_datagrid_col_item crmabe-engagement_col_date">
+                                        <span class="crmabe-engagement_col_date_time">Sept 23, 2022</span>
+                                        <span class="crmabe-engagement_col_date_subtext">Occurred</span>
+                                    </li>
+                                    <li class="crmabe-engagement_datagrid_col_item crmabe-engagement_col_sentby">
+                                        <div class="crmabe-engagement_user_avatar">
+                                            <span class="crmabe-engagement_user_initials">GG</span>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="crmabe-engagement_datagrid_col_item crmabe-engagement_col_recent_activity">
+                                        <span class="crmabe-engagement_col_activity_text tooltip">
+                                            Viewed: How to sell paper
+                                            <div class="tooltip_panel">
+                                                <div class="tooltip_panel_wrapper">
+                                                    <div class="tooltip_panel_arrow"></div>
+                                                    <div class="tooltip_panel_inner">
+                                                        <div class="crmabe-engagement_activity">
+                                                            <div class="crmabe-engagement_activity_header">Recent
+                                                                Activity</div>
+                                                            <div class="crmabe-engagement_activity_content">
+                                                                <div class="crmabe-engagement_activity_item">
+                                                                    <div class="crmabe-engagement_activity_item_time">
+                                                                        <span
+                                                                            class="crmabe-engagement_activity_item_time_icon"></span>
+                                                                        <span
+                                                                            class="crmabe-engagement_activity_item_time_string">10:17am</span>
+                                                                    </div>
+                                                                    <div class="crmabe-engagement_activity_item_detail">
+                                                                        First Last commented on File Name
+                                                                    </div>
+                                                                </div>
+                                                                <div class="crmabe-engagement_activity_item">
+                                                                    <div class="crmabe-engagement_activity_item_time">
+                                                                        <span
+                                                                            class="crmabe-engagement_activity_item_time_icon"></span>
+                                                                        <span
+                                                                            class="crmabe-engagement_activity_item_time_string">2:56pm</span>
+                                                                    </div>
+                                                                    <div class="crmabe-engagement_activity_item_detail">
+                                                                        First Last commented on File Name
+                                                                    </div>
+                                                                </div>
+                                                                <div class="crmabe-engagement_activity_item">
+                                                                    <div class="crmabe-engagement_activity_item_time">
+                                                                        <span
+                                                                            class="crmabe-engagement_activity_item_time_icon"></span>
+                                                                        <span
+                                                                            class="crmabe-engagement_activity_item_time_string">4:13pm</span>
+                                                                    </div>
+                                                                    <div class="crmabe-engagement_activity_item_detail">
+                                                                        First Last Viewed File Name
+                                                                    </div>
+                                                                </div>
+                                                                <div class="crmabe-engagement_activity_item">
+                                                                    <div class="crmabe-engagement_activity_item_time">
+                                                                        <span
+                                                                            class="crmabe-engagement_activity_item_time_icon"></span>
+                                                                        <span
+                                                                            class="crmabe-engagement_activity_item_time_string">2:56pm</span>
+                                                                    </div>
+                                                                    <div class="crmabe-engagement_activity_item_detail">
+                                                                        First Last commented on File Name
+                                                                    </div>
+                                                                </div>
+                                                                <div class="crmabe-engagement_activity_item">
+                                                                    <div class="crmabe-engagement_activity_item_time">
+                                                                        <span
+                                                                            class="crmabe-engagement_activity_item_time_icon"></span>
+                                                                        <span
+                                                                            class="crmabe-engagement_activity_item_time_string">4:13pm</span>
+                                                                    </div>
+                                                                    <div class="crmabe-engagement_activity_item_detail">
+                                                                        First Last commented on File Name
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="crmabe-engagement_activity_footer">
+                                                                <div class="crmabe-engagement_activity_footer_button">
+                                                                    <span
+                                                                        class="crmabe-engagement_activity_footer_button_label">See
+                                                                        more</span>
+                                                                    <svg width="16" height="17" viewBox="0 0 16 17"
+                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M15 5.7V1.5M15 1.5H10.8M15 1.5L5.66667 10.8333M7.53333 4.3H1.93333C1.41787 4.3 1 4.71787 1 5.23333V14.5667C1 15.0821 1.41787 15.5 1.93333 15.5H11.2667C11.7821 15.5 12.2 15.0821 12.2 14.5667V8.96667"
+                                                                            stroke="#006DCC" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                        <span class="crmabe-engagement_col_activity_date">1 hr ago</span>
+                                    </li>
+                                    <li class="crmabe-engagement_datagrid_col_item crmabe-engagement_col_recipients">
+                                        <div class="crmabe-engagement_col_recipients_wrapper">
+                                            <div class="crmabe-engagement_avatar_cluster">
+                                                <ul class="crmabe-engagement_avatar_list">
+                                                    <li class="crmabe-engagement_avatar_item">
+                                                        <div class="crmabe-engagement_user_avatar">
+                                                            <span class="crmabe-engagement_user_initials">PB</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="crmabe-engagement_avatar_item">
+                                                        <div class="crmabe-engagement_user_avatar">
+                                                            <div class="crmabe-engagement_user_avatar">
+                                                                <span class="crmabe-engagement_user_initials">DF</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="crmabe-engagement_avatar_item">
+                                                        <div class="crmabe-engagement_user_avatar">
+                                                            <span class="crmabe-engagement_user_initials">AS</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="crmabe-engagement_avatar_item">
+                                                        <div class="crmabe-engagement_user_avatar">
+                                                            <span class="crmabe-engagement_user_initials">EW</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="crmabe-engagement_avatar_item">
+                                                        <div class="crmabe-engagement_user_avatar">
+                                                            <span class="crmabe-engagement_user_initials">VW</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="crmabe-engagement_recipients_list_plus_more">+2</div>
+                                            </div>
+                                            <div class="crmabe-engagement_open_detail_icon">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M14.9232 9.246H14.0001C13.7539 9.246 13.5386 9.46139 13.5386 9.70754V13.0922C13.5386 13.3383 13.3232 13.5537 13.077 13.5537H2.92317C2.67702 13.5537 2.46163 13.3383 2.46163 13.0922V6.63062C2.46163 6.38447 2.67702 6.16908 2.92317 6.16908H4.15394C4.40009 6.16908 4.61548 5.9537 4.61548 5.70754V4.78447C4.61548 4.53831 4.40009 4.32293 4.15394 4.32293H1.84625C1.16932 4.32293 0.615479 4.87677 0.615479 5.5537V14.1691C0.615479 14.846 1.16932 15.3998 1.84625 15.3998H14.1539C14.8309 15.3998 15.3847 14.846 15.3847 14.1691V9.70754C15.3847 9.46139 15.1693 9.246 14.9232 9.246ZM10.4616 4.32293C7.38471 4.32293 4.58471 7.06139 4.33856 10.2922C4.30779 10.5383 4.52317 10.7845 4.80009 10.7845H5.72317C5.96932 10.7845 6.15394 10.5998 6.18471 10.3845C6.40009 8.07677 8.36932 6.16908 10.7693 6.16908H11.2616C11.5386 6.16908 11.6616 6.50754 11.477 6.69216L9.78471 8.41523C9.60009 8.59985 9.60009 8.87677 9.78471 9.06139L10.4309 9.70754C10.6155 9.89216 10.8924 9.89216 11.077 9.70754L15.2616 5.5537C15.4462 5.36908 15.4462 5.09216 15.2616 4.90754L11.1078 0.753696C10.9232 0.569081 10.6462 0.569081 10.4616 0.753696L9.81548 1.39985C9.63086 1.58447 9.60009 1.86139 9.78471 2.046L11.5078 3.76908C11.6924 3.9537 11.5693 4.29216 11.2924 4.29216L10.4616 4.32293Z"
+                                                        fill="#0070D2" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="crmabe-engagement_drawer">
+                                    <div class="crmabe-engagement_drawer_item">
+                                        <div class="crmabe-engagement_drawer_item_thumbnail">
+                                            <img alt="content thumbnail" class="crmabe-engagement_drawer_thumbnail_img"
+                                                src="https://picsum.photos/66/38" />
+                                        </div>
+                                        <div class="crmabe-engagement_drawer_item_content">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="crmabe-engagement_drawer_item_content_icon">
+                                                <rect width="16" height="16" rx="2" fill="#EA4335" />
+                                                <path
+                                                    d="M13.1102 9.34505C12.3147 8.47524 10.1145 8.82906 9.59849 8.91752C8.83881 8.15827 8.30847 7.25898 8.1293 6.92727C8.41597 6.08694 8.60231 5.19501 8.63097 4.31783C8.63097 3.52173 8.3228 2.66666 7.46278 2.66666C7.16178 2.67403 6.88944 2.84357 6.73894 3.10156C6.37343 3.75024 6.51677 5.09181 7.10444 6.44813C6.76044 7.44326 6.26593 8.88066 5.61375 10.0453C4.73224 10.4065 2.8617 11.2911 2.68253 12.2715C2.6252 12.5589 2.72553 12.8538 2.94054 13.0528C3.14837 13.2445 3.42071 13.3403 3.70022 13.3329C4.8254 13.3329 5.95059 11.726 6.71027 10.3476C7.34812 10.119 8.3658 9.81682 9.39065 9.62516C10.5803 10.694 11.641 10.8562 12.1785 10.8562C12.9095 10.8562 13.1819 10.5318 13.2822 10.2591C13.3897 9.9495 13.3252 9.59568 13.1102 9.34505ZM12.3362 9.90527C12.3004 10.119 12.0352 10.3328 11.5407 10.2222C10.9673 10.0748 10.4298 9.7947 9.97833 9.4114C10.3653 9.34505 11.2684 9.2566 11.9062 9.38191C12.1355 9.42614 12.4007 9.55882 12.3362 9.90527ZM7.20478 3.38167C7.25495 3.28585 7.34812 3.2195 7.45562 3.2195C7.72796 3.2195 7.78529 3.55858 7.78529 3.83869C7.74946 4.50948 7.60612 5.19501 7.42695 5.80683C6.96828 4.55371 7.03278 3.6839 7.20478 3.38167ZM7.14028 9.50722C7.38395 9.01335 7.72796 8.11405 7.84979 7.75285C8.12213 8.21725 8.5808 8.79958 8.82448 9.06494C8.83164 9.05757 7.89279 9.2566 7.14028 9.50722ZM5.34141 10.7751C4.61757 11.9692 3.90805 12.7211 3.49238 12.7211C3.42788 12.7211 3.35621 12.699 3.30604 12.6548C3.22721 12.5884 3.19137 12.4852 3.21287 12.382C3.29171 11.9545 4.11589 11.3353 5.34141 10.7751Z"
+                                                    fill="white" />
+                                            </svg>
+                                            <div class="crmabe-engagement_drawer_item_content_name">2023 Planning
+                                                preparation</div>
+                                        </div>
+                                        <div class="crmabe-engagement_drawer_item_view_time">Last downloaded on Dec 10,
+                                            2022</div>
+                                        <div class="crmabe-engagement_drawer_item_view_detail">
+                                            <div class="crmabe-engagement_drawer_item_view_detail_time">5 views • 7 min
+                                                view time</div>
+                                        </div>
+                                    </div>
+                                    <div class="crmabe-engagement_drawer_item">
+                                        <div class="crmabe-engagement_drawer_item_thumbnail">
+                                            <img alt="content thumbnail" class="crmabe-engagement_drawer_thumbnail_img"
+                                                src="https://picsum.photos/66/38" />
+                                        </div>
+                                        <div class="crmabe-engagement_drawer_item_content">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="crmabe-engagement_drawer_item_content_icon">
+                                                <rect width="16" height="16" rx="2" fill="#EA4335" />
+                                                <path
+                                                    d="M13.1102 9.34505C12.3147 8.47524 10.1145 8.82906 9.59849 8.91752C8.83881 8.15827 8.30847 7.25898 8.1293 6.92727C8.41597 6.08694 8.60231 5.19501 8.63097 4.31783C8.63097 3.52173 8.3228 2.66666 7.46278 2.66666C7.16178 2.67403 6.88944 2.84357 6.73894 3.10156C6.37343 3.75024 6.51677 5.09181 7.10444 6.44813C6.76044 7.44326 6.26593 8.88066 5.61375 10.0453C4.73224 10.4065 2.8617 11.2911 2.68253 12.2715C2.6252 12.5589 2.72553 12.8538 2.94054 13.0528C3.14837 13.2445 3.42071 13.3403 3.70022 13.3329C4.8254 13.3329 5.95059 11.726 6.71027 10.3476C7.34812 10.119 8.3658 9.81682 9.39065 9.62516C10.5803 10.694 11.641 10.8562 12.1785 10.8562C12.9095 10.8562 13.1819 10.5318 13.2822 10.2591C13.3897 9.9495 13.3252 9.59568 13.1102 9.34505ZM12.3362 9.90527C12.3004 10.119 12.0352 10.3328 11.5407 10.2222C10.9673 10.0748 10.4298 9.7947 9.97833 9.4114C10.3653 9.34505 11.2684 9.2566 11.9062 9.38191C12.1355 9.42614 12.4007 9.55882 12.3362 9.90527ZM7.20478 3.38167C7.25495 3.28585 7.34812 3.2195 7.45562 3.2195C7.72796 3.2195 7.78529 3.55858 7.78529 3.83869C7.74946 4.50948 7.60612 5.19501 7.42695 5.80683C6.96828 4.55371 7.03278 3.6839 7.20478 3.38167ZM7.14028 9.50722C7.38395 9.01335 7.72796 8.11405 7.84979 7.75285C8.12213 8.21725 8.5808 8.79958 8.82448 9.06494C8.83164 9.05757 7.89279 9.2566 7.14028 9.50722ZM5.34141 10.7751C4.61757 11.9692 3.90805 12.7211 3.49238 12.7211C3.42788 12.7211 3.35621 12.699 3.30604 12.6548C3.22721 12.5884 3.19137 12.4852 3.21287 12.382C3.29171 11.9545 4.11589 11.3353 5.34141 10.7751Z"
+                                                    fill="white" />
+                                            </svg>
+                                            <div class="crmabe-engagement_drawer_item_content_name">New technology
+                                                report</div>
+                                        </div>
+                                        <div class="crmabe-engagement_drawer_item_view_time">Last viewed for 12 min on
+                                            Dec 10, 2022</div>
+                                        <div class="crmabe-engagement_drawer_item_view_detail">
+                                            <div class="crmabe-engagement_drawer_item_view_detail_time">11 views • 26
+                                                min view time</div>
+                                        </div>
+                                    </div>
+                                    <div class="crmabe-engagement_drawer_item">
+                                        <div class="crmabe-engagement_drawer_item_thumbnail">
+                                            <img alt="content thumbnail" class="crmabe-engagement_drawer_thumbnail_img"
+                                                src="https://picsum.photos/66/38" />
+                                        </div>
+                                        <div class="crmabe-engagement_drawer_item_content">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="crmabe-engagement_drawer_item_content_icon">
+                                                <rect width="16" height="16" rx="2" fill="#EA4335" />
+                                                <path
+                                                    d="M13.1102 9.34505C12.3147 8.47524 10.1145 8.82906 9.59849 8.91752C8.83881 8.15827 8.30847 7.25898 8.1293 6.92727C8.41597 6.08694 8.60231 5.19501 8.63097 4.31783C8.63097 3.52173 8.3228 2.66666 7.46278 2.66666C7.16178 2.67403 6.88944 2.84357 6.73894 3.10156C6.37343 3.75024 6.51677 5.09181 7.10444 6.44813C6.76044 7.44326 6.26593 8.88066 5.61375 10.0453C4.73224 10.4065 2.8617 11.2911 2.68253 12.2715C2.6252 12.5589 2.72553 12.8538 2.94054 13.0528C3.14837 13.2445 3.42071 13.3403 3.70022 13.3329C4.8254 13.3329 5.95059 11.726 6.71027 10.3476C7.34812 10.119 8.3658 9.81682 9.39065 9.62516C10.5803 10.694 11.641 10.8562 12.1785 10.8562C12.9095 10.8562 13.1819 10.5318 13.2822 10.2591C13.3897 9.9495 13.3252 9.59568 13.1102 9.34505ZM12.3362 9.90527C12.3004 10.119 12.0352 10.3328 11.5407 10.2222C10.9673 10.0748 10.4298 9.7947 9.97833 9.4114C10.3653 9.34505 11.2684 9.2566 11.9062 9.38191C12.1355 9.42614 12.4007 9.55882 12.3362 9.90527ZM7.20478 3.38167C7.25495 3.28585 7.34812 3.2195 7.45562 3.2195C7.72796 3.2195 7.78529 3.55858 7.78529 3.83869C7.74946 4.50948 7.60612 5.19501 7.42695 5.80683C6.96828 4.55371 7.03278 3.6839 7.20478 3.38167ZM7.14028 9.50722C7.38395 9.01335 7.72796 8.11405 7.84979 7.75285C8.12213 8.21725 8.5808 8.79958 8.82448 9.06494C8.83164 9.05757 7.89279 9.2566 7.14028 9.50722ZM5.34141 10.7751C4.61757 11.9692 3.90805 12.7211 3.49238 12.7211C3.42788 12.7211 3.35621 12.699 3.30604 12.6548C3.22721 12.5884 3.19137 12.4852 3.21287 12.382C3.29171 11.9545 4.11589 11.3353 5.34141 10.7751Z"
+                                                    fill="white" />
+                                            </svg>
+                                            <div class="crmabe-engagement_drawer_item_content_name">Exploring the future
+                                                of web</div>
+                                        </div>
+                                        <div class="crmabe-engagement_drawer_item_view_time">No recent activity</div>
+                                        <div class="crmabe-engagement_drawer_item_view_detail">
+                                            <div class="crmabe-engagement_drawer_item_view_detail_time">0 views • 0 min
+                                                view time</div>
+                                        </div>
+                                    </div>
+                                    <div class="crmabe-engagement_drawer_item">
+                                        <div class="crmabe-engagement_drawer_item_thumbnail">
+                                            <img alt="content thumbnail" class="crmabe-engagement_drawer_thumbnail_img"
+                                                src="https://picsum.photos/66/38" />
+                                        </div>
+                                        <div class="crmabe-engagement_drawer_item_content">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="crmabe-engagement_drawer_item_content_icon">
+                                                <rect width="16" height="16" rx="2" fill="#EA4335" />
+                                                <path
+                                                    d="M13.1102 9.34505C12.3147 8.47524 10.1145 8.82906 9.59849 8.91752C8.83881 8.15827 8.30847 7.25898 8.1293 6.92727C8.41597 6.08694 8.60231 5.19501 8.63097 4.31783C8.63097 3.52173 8.3228 2.66666 7.46278 2.66666C7.16178 2.67403 6.88944 2.84357 6.73894 3.10156C6.37343 3.75024 6.51677 5.09181 7.10444 6.44813C6.76044 7.44326 6.26593 8.88066 5.61375 10.0453C4.73224 10.4065 2.8617 11.2911 2.68253 12.2715C2.6252 12.5589 2.72553 12.8538 2.94054 13.0528C3.14837 13.2445 3.42071 13.3403 3.70022 13.3329C4.8254 13.3329 5.95059 11.726 6.71027 10.3476C7.34812 10.119 8.3658 9.81682 9.39065 9.62516C10.5803 10.694 11.641 10.8562 12.1785 10.8562C12.9095 10.8562 13.1819 10.5318 13.2822 10.2591C13.3897 9.9495 13.3252 9.59568 13.1102 9.34505ZM12.3362 9.90527C12.3004 10.119 12.0352 10.3328 11.5407 10.2222C10.9673 10.0748 10.4298 9.7947 9.97833 9.4114C10.3653 9.34505 11.2684 9.2566 11.9062 9.38191C12.1355 9.42614 12.4007 9.55882 12.3362 9.90527ZM7.20478 3.38167C7.25495 3.28585 7.34812 3.2195 7.45562 3.2195C7.72796 3.2195 7.78529 3.55858 7.78529 3.83869C7.74946 4.50948 7.60612 5.19501 7.42695 5.80683C6.96828 4.55371 7.03278 3.6839 7.20478 3.38167ZM7.14028 9.50722C7.38395 9.01335 7.72796 8.11405 7.84979 7.75285C8.12213 8.21725 8.5808 8.79958 8.82448 9.06494C8.83164 9.05757 7.89279 9.2566 7.14028 9.50722ZM5.34141 10.7751C4.61757 11.9692 3.90805 12.7211 3.49238 12.7211C3.42788 12.7211 3.35621 12.699 3.30604 12.6548C3.22721 12.5884 3.19137 12.4852 3.21287 12.382C3.29171 11.9545 4.11589 11.3353 5.34141 10.7751Z"
+                                                    fill="white" />
+                                            </svg>
+                                            <div class="crmabe-engagement_drawer_item_content_name">History of digital
+                                                interfaces</div>
+                                        </div>
+                                        <div class="crmabe-engagement_drawer_item_view_time">No recent activity</div>
+                                        <div class="crmabe-engagement_drawer_item_view_detail">
+                                            <div class="crmabe-engagement_drawer_item_view_detail_time">0 views • 0 min
+                                                view time</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="crmabe-engagement_datagrid_row_item">
+                                <ul class="crmabe-engagement_datagrid_row_cols">
+                                    <li class="crmabe-engagement_datagrid_col_item crmabe-engagement_col_name">
+                                        <div class="crmabe-engagement_col_name_wrapper">
+                                            <span class="crmabe-engagement_col_name_arrow_icon">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M18.327 7.25015L10.4424 15.2117C10.2117 15.4425 9.82704 15.4425 9.59627 15.2117L1.71165 7.25015C1.48088 7.01938 1.48088 6.63477 1.71165 6.404L2.55781 5.55784C2.78857 5.32707 3.17319 5.32707 3.40396 5.55784L9.59627 11.8271C9.82704 12.0578 10.2117 12.0578 10.4424 11.8271L16.6347 5.5963C16.8655 5.36553 17.2501 5.36553 17.4809 5.5963L18.327 6.44246C18.5193 6.67323 18.5193 7.01938 18.327 7.25015Z"
+                                                        fill="#706E6B" />
+                                                </svg>
+                                            </span>
+                                            <span class="crmabe-engagement_col_name_type_icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_2877_316106)">
+                                                        <rect width="24" height="24" rx="2" fill="#E71D32" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M3.46875 4.96875C3.46875 4.55454 3.80454 4.21875 4.21875 4.21875H19.7812C20.1955 4.21875 20.5312 4.55454 20.5312 4.96875V5.90625C20.5312 6.32046 20.1955 6.65625 19.7812 6.65625H4.21875C3.80454 6.65625 3.46875 6.32046 3.46875 5.90625V4.96875Z"
+                                                            stroke="white" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M4.6875 6.65625H19.3125V17.625H4.6875V6.65625Z"
+                                                            stroke="white" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M12 20.4688V17.625" stroke="white"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M3.46875 17.625H20.5312" stroke="white"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M14.4375 10.3125H16.875" stroke="white"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M14.4375 12.75H16.875" stroke="white"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M9.5625 13.9688C10.9087 13.9688 12 12.8774 12 11.5312C12 10.1851 10.9087 9.09375 9.5625 9.09375C8.21631 9.09375 7.125 10.1851 7.125 11.5312C7.125 12.8774 8.21631 13.9688 9.5625 13.9688Z"
+                                                            stroke="white" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M13.2188 21.2812C13.2188 20.8319 12.6728 20.4688 12 20.4688C11.3272 20.4688 10.7812 20.8319 10.7812 21.2812"
+                                                            stroke="white" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_2877_316106">
+                                                            <rect width="24" height="24" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </span>
+                                            <span class="crmabe-engagement_col_name_text">SilverTower + ACME |
+                                                Connect</span>
+                                        </div>
+                                    </li>
+                                    <li class="crmabe-engagement_datagrid_col_item crmabe-engagement_col_type">
+                                        <span class="crmabe-engagement_col_type_text">Meeting</span>
+                                    </li>
+                                    <li class="crmabe-engagement_datagrid_col_item crmabe-engagement_col_date">
+                                        <span class="crmabe-engagement_col_date_time">Sept 23, 2022</span>
+                                        <span class="crmabe-engagement_col_date_subtext">Occurred</span>
+                                    </li>
+                                    <li class="crmabe-engagement_datagrid_col_item crmabe-engagement_col_sentby">
+                                        <div class="crmabe-engagement_user_avatar">
+                                            <img alt="user avatar" class="crmabe-engagement_user_avatar_img"
+                                                src="https://randomuser.me/api/portraits/men/84.jpg" />
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="crmabe-engagement_datagrid_col_item crmabe-engagement_col_recent_activity">
+                                        <span class="crmabe-engagement_col_activity_text">Viewed: How to sell
+                                            paper</span>
+                                        <span class="crmabe-engagement_col_activity_date">23 min ago</span>
+                                    </li>
+                                    <li class="crmabe-engagement_datagrid_col_item crmabe-engagement_col_recipients">
+                                        <div class="crmabe-engagement_col_recipients_wrapper">
+                                            <div class="crmabe-engagement_avatar_cluster">
+                                                <ul class="crmabe-engagement_avatar_list">
+                                                    <li class="crmabe-engagement_avatar_item">
+                                                        <div class="crmabe-engagement_user_avatar">
+                                                            <span class="crmabe-engagement_user_initials">PB</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="crmabe-engagement_avatar_item">
+                                                        <div class="crmabe-engagement_user_avatar">
+                                                            <div class="crmabe-engagement_user_avatar">
+                                                                <span class="crmabe-engagement_user_initials">DF</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="crmabe-engagement_avatar_item">
+                                                        <div class="crmabe-engagement_user_avatar">
+                                                            <span class="crmabe-engagement_user_initials">AS</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="crmabe-engagement_avatar_item">
+                                                        <div class="crmabe-engagement_user_avatar">
+                                                            <span class="crmabe-engagement_user_initials">EW</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="crmabe-engagement_avatar_item">
+                                                        <div class="crmabe-engagement_user_avatar">
+                                                            <span class="crmabe-engagement_user_initials">VW</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="crmabe-engagement_recipients_list_plus_more">+51</div>
+                                            </div>
+                                            <div class="crmabe-engagement_open_detail_icon">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M14.9232 9.246H14.0001C13.7539 9.246 13.5386 9.46139 13.5386 9.70754V13.0922C13.5386 13.3383 13.3232 13.5537 13.077 13.5537H2.92317C2.67702 13.5537 2.46163 13.3383 2.46163 13.0922V6.63062C2.46163 6.38447 2.67702 6.16908 2.92317 6.16908H4.15394C4.40009 6.16908 4.61548 5.9537 4.61548 5.70754V4.78447C4.61548 4.53831 4.40009 4.32293 4.15394 4.32293H1.84625C1.16932 4.32293 0.615479 4.87677 0.615479 5.5537V14.1691C0.615479 14.846 1.16932 15.3998 1.84625 15.3998H14.1539C14.8309 15.3998 15.3847 14.846 15.3847 14.1691V9.70754C15.3847 9.46139 15.1693 9.246 14.9232 9.246ZM10.4616 4.32293C7.38471 4.32293 4.58471 7.06139 4.33856 10.2922C4.30779 10.5383 4.52317 10.7845 4.80009 10.7845H5.72317C5.96932 10.7845 6.15394 10.5998 6.18471 10.3845C6.40009 8.07677 8.36932 6.16908 10.7693 6.16908H11.2616C11.5386 6.16908 11.6616 6.50754 11.477 6.69216L9.78471 8.41523C9.60009 8.59985 9.60009 8.87677 9.78471 9.06139L10.4309 9.70754C10.6155 9.89216 10.8924 9.89216 11.077 9.70754L15.2616 5.5537C15.4462 5.36908 15.4462 5.09216 15.2616 4.90754L11.1078 0.753696C10.9232 0.569081 10.6462 0.569081 10.4616 0.753696L9.81548 1.39985C9.63086 1.58447 9.60009 1.86139 9.78471 2.046L11.5078 3.76908C11.6924 3.9537 11.5693 4.29216 11.2924 4.29216L10.4616 4.32293Z"
+                                                        fill="#0070D2" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
